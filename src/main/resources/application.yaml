@@ -1,0 +1,16 @@
+server:
+  port: 8189
+spring:
+  application:
+    name: javapro-springdata29
+  datasource:
+    url: jdbc:postgresql://localhost:5436/postgres
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 352800
+
+  jpa:
+    show-sql: true
+  data:
+    jdbc:
+      dialect: postgresql
