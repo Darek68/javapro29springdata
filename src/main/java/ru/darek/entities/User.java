@@ -3,12 +3,11 @@ package ru.darek.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Getter
-@Setter
+
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 @Builder(toBuilder = true)
-@ToString
 @Entity
 @Table(name = "USERS")
 public class User {

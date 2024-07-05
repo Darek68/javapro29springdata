@@ -31,13 +31,13 @@ public class UserCrudService {
         log.info("after saved user: {}", savedCUser);
         return savedCUser;
     }
-
+    @Transactional(readOnly = true)
     public Optional<User> getUser(long id) {
         Optional<User> user = userRepository.findById(id);
         log.info("user: {}", user);
         return user;
     }
-
+    @Transactional(readOnly = true)
     public List<User> findAll() {
         List<User> users = StreamSupport.stream(userRepository.findAll().spliterator(), false)
                 .collect(Collectors.toList());
